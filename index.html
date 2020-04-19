@@ -7,29 +7,31 @@
   </head>
   <body>
     <script>
-      let output = [];
-
-      function Yugi(number) {
+      function yugi(number) {
+        let startArr = [];
         for (i = 1; i <= number; i++) {
           if (i % 2 === 0 && i % 3 === 0 && i % 5 === 0) {
-            output.push("yu-gi-oh");
+            startArr.push("yu-gi-oh");
           } else if (i % 2 === 0 && i % 3 === 0) {
-            output.push("yu-gi");
+            startArr.push("yu-gi");
           } else if (i % 2 === 0 && i % 5 === 0) {
-            output.push("yu-oh");
+            startArr.push("yu-oh");
           } else if (i % 3 === 0 && i % 5 === 0) {
-            output.push("gi-oh");
+            startArr.push("gi-oh");
           } else if (i % 2 === 0) {
-            output.push("yu");
+            startArr.push("yu");
           } else if (i % 3 === 0) {
-            output.push("gi");
+            startArr.push("gi");
           } else if (i % 5 === 0) {
-            output.push("oh");
-          } else output.push(i);
+            startArr.push("oh");
+          } else {
+            startArr.push(i);
+          }
         }
-        return output;
+        return startArr;
       }
-      console.log(Yugi(100));
+      console.log(yugi(100));
+      console.log(yugi(50));
     </script>
   </body>
 </html>
